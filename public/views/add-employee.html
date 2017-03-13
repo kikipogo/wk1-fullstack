@@ -1,0 +1,33 @@
+<div class='container'>
+  <h1>Empoyees stuff</h1>
+  <form>
+    <input ng-model="ec.newEmployee.first_name" placeholder="First Name">
+    <input ng-model="ec.newEmployee.last_name" placeholder="Last Name">
+    <input ng-model="ec.newEmployee.title" placeholder="Job Title">
+    <input ng-model="ec.newEmployee.salary" placeholder="Salary">
+    <button id="inputButton" ng-click="ec.employee.addEmployee(ec.newEmployee)">Click here to add an Employee!</button>
+  </form>
+  <table align = "center">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Job Title</th>
+        <th>Salary</th>
+        <th>Delete</th>
+        <th>Save</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="employee in ec.employee.list">
+        <td><input ng-model="employee.first_name"></td>
+        <td><input ng-model="employee.last_name"></td>
+        <td><input ng-model="employee.title"></td>
+        <td><input ng-model="employee.salary"></td>
+        <td><button class="deleteButton" type="button" ng-click="ec.employee.deleteEmployee(employee)">Delete</button></td>
+        <td><button class="saveButton "ng-click="ec.saveEmployee(employee)">Save</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Total Monthy Expenditures: ${{ec.employee.sum/12}}</p>
+</div>

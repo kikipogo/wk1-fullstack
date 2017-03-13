@@ -2,17 +2,17 @@
 <html>
 <head>
     <title>Weekend 5</title>
-    <script type="text/javascript" src="/vendor/angular.min.js"></script>
-    <script type="text/javascript" src="/vendor/angular-route.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <link rel="stylesheet" href="/vendor/bootstrap.min.css" />
+    <script src="scripts/factories/factory.factory.js" charset="utf-8"></script>
+    <script src="scripts/controllers/employee.controller.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/vendors/bootstrap.min.css" />
     <link rel="stylesheet" href="/styles/style.css" />
 </head>
 
 <body ng-app="myApp">
-  <div class="container">
     <header ng-include="'/views/templates/nav.html'"></header>
     <main ng-view></main>
-  </div>
 </body>
 </html>
